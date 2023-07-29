@@ -51,7 +51,7 @@ def sentiment_analysis(text :str):
 
     text_vectorizer = vectorizer.transform([text_preprocess]) 
     label_pred = model.predict_proba(text_vectorizer)[0]
-    list_label = ["CLEAN", 'OFFENSIVE', 'HATE']
+    list_label = ["CLEAN", 'HATE']
     result_dict = dict(zip(list_label, label_pred))
     return result_dict
     
